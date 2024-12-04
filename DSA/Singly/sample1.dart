@@ -3,7 +3,7 @@ class Node {
   Node? next;
   Node(this.data);
 }
-
+ 
 class SinglyLinkedList {
   Node? head;
   Node? tail;
@@ -22,7 +22,7 @@ class SinglyLinkedList {
       print("EMPTY");
     } else {
       Node? temp = head;
-      while (temp != null) {
+      while(temp != null) {
         print(temp.data);
         temp = temp.next;
       }
