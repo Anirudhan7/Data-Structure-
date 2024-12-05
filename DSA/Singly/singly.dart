@@ -12,7 +12,7 @@ void addNode(int data){
    if(head ==null){
     head=newNode;
    }else{
-    Node temp=h
+    Node temp=Node(data);
    }
 }
 }
