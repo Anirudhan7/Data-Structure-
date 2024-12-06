@@ -3,7 +3,7 @@ class Node {
   Node? next;
   Node(this.data);
 }
- 
+
 class SinglyLinkedList {
   Node? head;
   Node? tail;
@@ -22,10 +22,17 @@ class SinglyLinkedList {
       print("EMPTY");
     } else {
       Node? temp = head;
-      while(temp != null) {
+      while (temp != null) {
         print(temp.data);
         temp = temp.next;
       }
+    }
+  }
+
+  void prepend(int data) {
+    Node newNode = Node(data);
+    if (head != null) {
+      newNode.next = head;
     }
   }
 }
@@ -37,5 +44,6 @@ void main() {
   list.addNOde(20);
   list.addNOde(30);
   list.addNOde(50);
+  list.prepend(51);
   list.display();
 }

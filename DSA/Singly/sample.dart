@@ -1,38 +1,26 @@
-// add a node or value t the front of the linked list
-
 class Node {
   int? data;
   Node? next;
   Node(this.data);
 }
 
-class singlylinkedlist {
+class LinkedList {
   Node? head;
   Node? tail;
 
-  void createnode(int data) {
-    Node newnode = Node(data);
+  void createNode(int data) {
+    Node newNode = Node(data);
     if (head == null) {
-      head = newnode;
+      head = newNode;
     } else {
-      tail?.next = newnode;
+      tail?.next = newNode;
     }
-    tail = newnode;
+    tail = newNode;
   }
 
-  void insertfront(int data) {
-    Node newnode = Node(data);
+  void displayList() {
     if (head == null) {
-      head = newnode;
-    } else {
-      newnode.next = head;
-      head = newnode;
-    }
-  }
-
-  displaylinkedlist() {
-    if (head == null) {
-      print('no list found');
+      print("List is empty");
     } else {
       Node? temp = head;
       while (temp != null) {
@@ -44,18 +32,13 @@ class singlylinkedlist {
 }
 
 void main() {
-  singlylinkedlist list = singlylinkedlist();
+  LinkedList list = LinkedList();
 
-  list.createnode(10);
-  list.createnode(15);
-  list.createnode(20);
-  list.createnode(25);
-  list.createnode(30);
-  list.createnode(40);
-  list.displaylinkedlist();
-  
-  print('--------------');
+  list.displayList();
+  list.createNode(12);
+  list.createNode(13);
+  list.createNode(84);
+  list.createNode(56);
 
-  list.insertfront(100);
-  list.displaylinkedlist();
+  list.displayList();
 }
