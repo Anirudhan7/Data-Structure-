@@ -36,5 +36,6 @@ void displaylinkedlist(){
 void main(){
 SinglyLinkedList list =SinglyLinkedList();
 list.createNode(15);
+ list.createNode(32);
 list.displaylinkedlist();
 }
