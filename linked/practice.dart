@@ -4,11 +4,11 @@ class Node {
   Node(this.data);
 }
 
-class LinkedList {
-  Node? head;
+class SinglyLinkedList {
   Node? tail;
+  Node? head;
 
-  void createNode(int data) {
+  void addnode(int data) {
     Node newNode = Node(data);
     if (head == null) {
       head = newNode;
@@ -18,28 +18,23 @@ class LinkedList {
     tail = newNode;
   }
 
-  void displayList() {
+  void display() {
     if (head == null) {
-      print("List is empty");
+      print("no data found");
     } else {
       Node? temp = head;
       while (temp != null) {
         print(temp.data);
-        temp = temp.next;
+      temp =temp.next;
       }
     }
   }
- 
 }
 
 void main() {
-  LinkedList list = LinkedList();
-
-  list.displayList();
-  list.createNode(12);
-  list.createNode(13);
-  list.createNode(84);
-  list.createNode(56);
-
-  list.displayList();
+  SinglyLinkedList list =SinglyLinkedList();
+  list.addnode(12);
+  list.addnode(54);
+  list.addnode(77);
+  list.display();
 }

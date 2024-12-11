@@ -1,11 +1,12 @@
 void main() {
-
-  LinkedList list =LinkedList();
-  list.displaylinkedlist();
+  LinkedList list = LinkedList();
 
   list.createNode(12);
   list.createNode(45);
   list.createNode(95);
+  list.deleteFirst();
+  // list.prepend(48);
+  // list.append(500);
   list.displaylinkedlist();
 }
 
@@ -30,6 +31,49 @@ class LinkedList {
     tail = newNode;
   }
 
+  void prepend(int data) {
+    Node newNode = Node(data);
+    if (head != null) {
+      newNode.next = head;
+      head = newNode;
+    }
+  }
+
+  void append(int data) {
+    Node newNode = Node(data);
+    if (tail != null) {
+      newNode.next = tail;
+      tail = newNode;
+    }
+  }
+
+  void deleteFirst() {
+    if (head == null) {
+      print("empty");
+    } else {
+      if (head == tail) {
+        head = null;
+        tail = null;
+        print("first node deleted");
+      } else {
+        head = head?.next;
+      }
+    }
+  }
+  void deletelast(){
+    if (tail==null){
+     print("no tail found");
+    }else{
+      if(head==tail){
+        head = null;
+        tail = null;
+        print("first node deleted");
+      }else{
+        
+      }
+    }
+  }
+
   void displaylinkedlist() {
     if (head == null) {
       print("List is empty");
@@ -41,5 +85,4 @@ class LinkedList {
       }
     }
   }
-
 }
