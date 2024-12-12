@@ -1,6 +1,6 @@
 void main() {
   List<int> array = [12, 23, 34, 35, 46, 57, 78,89,97,99,100];
-  int target = 23;
+  int target = 97;
   int result = binarySearch(array, target);
   print(result);
 }

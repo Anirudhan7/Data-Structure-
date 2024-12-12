@@ -26,7 +26,6 @@ void insertfront(int data){
   if(head == null){
     head = newnode;
   }else{
-     
     newnode.next = head;
     head = newnode;
   }
