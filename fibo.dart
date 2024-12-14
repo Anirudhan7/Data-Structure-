@@ -1,11 +1,11 @@
-void main(){
-print(fibo(4));
-}
-int fibo(int n){
-if(n<2){
-  return n;
+void main() {
+  print(fibo(4));
 }
 
-return fibo(n-1) +fibo(n-2) ;
+int fibo(int n) {
+  if (n < 2) {
+    return n;
+  }
 
+  return fibo(n - 1) + fibo(n - 2);
 }

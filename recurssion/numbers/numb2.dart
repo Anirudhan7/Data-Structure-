@@ -1,6 +1,5 @@
-void main(){
-
-
+void main()
+{
 sum(1);
 }
 
