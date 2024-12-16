@@ -1,7 +1,14 @@
 void main(){
 
-  var n =5;
-  var sum = n*(n+1)/2;
-  print(sum);
+print(func(0));
+}
 
+
+int func(int i){
+  // print(i);
+if(i ==5){
+  return 88 ;
+  }
+  i++;
+  return func(i);
 }
