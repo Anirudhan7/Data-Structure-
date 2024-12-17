@@ -6,7 +6,7 @@ void main() {
   list.createNode(95);
   list.deleteFirst();
   // list.prepend(48);
-  // list.append(500);
+  list.append(500);
   list.displaylinkedlist();
 }
 

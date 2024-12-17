@@ -6,6 +6,7 @@ class Node {
 }
 
 class DoublyLinkedList {
+  var size = 0;
   Node? head;
   Node? tail;
 
@@ -18,6 +19,7 @@ class DoublyLinkedList {
       newNode.previous = tail;
     }
     tail = newNode;
+    size++;
   }
 
   void display() {
@@ -38,29 +40,57 @@ class DoublyLinkedList {
       temp = temp.previous;
     }
   }
-  void insertfront(int data){
-    Node newNode =Node(data);
-    if(head==null){
-      head=newNode;
-    }else{
-      newNode.next=head;
-      newNode.previous=null;
-    }
-    head =newNode;
-  }
-  void insertBack(int data){
-    Node newNode =Node(data);
-    if(tail ==null){
-      tail?.next=newNode;
-      newNode.previous =tail;
-      tail=newNode;
-    }
 
-    
+  void insertfront(int data) {
+    Node newNode = Node(data);
+    if (head == null) {
+      head = newNode;
+    } else {
+      newNode.next = head;
+      newNode.previous = null;
+    }
+    head = newNode;
+  }
+
+  void insertBack(int data) {
+    Node newNode = Node(data);
+    if (tail == null) {
+      tail?.next = newNode;
+      newNode.previous = tail;
+      tail = newNode;
+    }
+  }
+
+  void deletemiddle() {
+    var middle = (size / 2).floor();
+    // print(middle);
+    Node? temp = head;
+    for (int i = 0; i < middle; i++) {
+      temp = temp?.next;
+      
+    }
+    print(temp?.data);
+  
+    temp?.next?.previous = temp.previous;
+    temp?.previous?.next = temp.next;
+  }
+
+  void deleteNode(int index) {
+    Node? temp = head;
+    for (int i = 0; i < index; i++) {
+      // temp = temp?.next;
+
+    }
   }
 }
 
 void main() {
   DoublyLinkedList list = DoublyLinkedList();
+  list.addNode(10);
+  list.addNode(20);
+  list.addNode(30);
+  list.addNode(40);
+  list.addNode(50);
+  list.deletemiddle();
   list.display();
 }
