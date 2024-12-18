@@ -54,7 +54,7 @@ class DoublyLinkedList {
 
   void insertBack(int data) {
     Node newNode = Node(data);
-    if (tail == null) {
+    if (tail != null) {
       tail?.next = newNode;
       newNode.previous = tail;
       tail = newNode;
@@ -67,10 +67,9 @@ class DoublyLinkedList {
     Node? temp = head;
     for (int i = 0; i < middle; i++) {
       temp = temp?.next;
-      
     }
     print(temp?.data);
-  
+
     temp?.next?.previous = temp.previous;
     temp?.previous?.next = temp.next;
   }
@@ -79,7 +78,6 @@ class DoublyLinkedList {
     Node? temp = head;
     for (int i = 0; i < index; i++) {
       // temp = temp?.next;
-
     }
   }
 }
@@ -92,5 +90,6 @@ void main() {
   list.addNode(40);
   list.addNode(50);
   list.deletemiddle();
+  list.insertBack(100);
   list.display();
 }

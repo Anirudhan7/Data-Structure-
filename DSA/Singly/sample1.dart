@@ -35,6 +35,14 @@ class SinglyLinkedList {
       newNode.next = head;
     }
   }
+  void revereseList(){
+    Node? temp =head;
+    Node? prev=null;
+    while(temp!=null){
+    
+    }
+
+  }
 }
 
 void main() {
