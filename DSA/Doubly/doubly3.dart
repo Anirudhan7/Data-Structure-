@@ -15,7 +15,7 @@ void main() {
   // list.deleteNode(1468532);
   // list.nodeIndex(16);
   // list.displayMiddle2();
-  list.addNode(30, 2);
+  list.addNode(30, 1);
   list.displayList();
 }
 

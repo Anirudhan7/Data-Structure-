@@ -6,5 +6,5 @@ return n*Fact(n-1);
 
 
 void main() { 
-print(Fact(8)); 
+print(Fact(4)); 
 }
