@@ -1,7 +1,7 @@
 void main(){
 
 List<int> array=[10,12,13,14,15,6,17,18,19,20];
-int target =18;
+int target =13;
 int result =binarySearch(array, target);
 print(result);
 }
