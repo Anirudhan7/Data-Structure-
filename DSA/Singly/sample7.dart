@@ -18,6 +18,25 @@ class SinglyList {
     tail = newNode;
   }
 
+  void createCyclic() {
+    if (head != null && tail != null) {
+      tail?.next = head;
+    }
+  }
+
+  void checkCyclic() {
+    Node? fast = head;
+    Node? slow = head;
+    while (fast != null && fast.next?.next != null) {
+      fast = fast.next?.next;
+      slow = slow?.next;
+      if (fast == slow) {
+        print("it is cyclic");
+      }
+    }
+    print("Not cyclic");
+  }
+
   void dispLayNode() {
     Node? temp = head;
     if (head == null) {
@@ -36,9 +55,9 @@ class SinglyList {
       if (temp.data == temp.next?.data) {
         temp.next = temp.next?.next;
       }
+      temp = temp.next;
     }
     print("duplicates removed");
-    temp = temp?.next;
   }
 }
 
@@ -51,6 +70,9 @@ void main() {
   list.createNode(40);
   list.createNode(40);
   list.createNode(50);
-  list.dupliRemove();
+  // list.dispLayNode();
+  // list.dupliRemove();
+  // list.createCyclic();
+  // list.checkCyclic();
   list.dispLayNode();
 }

@@ -57,6 +57,7 @@ class LinkedList {
   void middleNode() {
     Node? slow = head;
     Node? fast = head;
+   
     while (fast != null && fast.next?.next != null) {
       slow = slow?.next;
       fast = fast.next?.next;
@@ -112,9 +113,9 @@ class LinkedList {
     for (int i = 0; i < index - 1; i++) {
       temp = temp?.next;
     }
-    newNode.next = temp?.next?.next;
-    newNode.prev = temp;
+  newNode.next = temp?.next;
     temp?.next?.prev = newNode;
+    newNode.prev = temp;
     temp?.next = newNode;
   }
 }
@@ -126,9 +127,10 @@ void main() {
   list.createNode(3);
   list.createNode(4);
   list.createNode(5);
+
   // list.insertFront(10);
   // list.insertBack(11);
-  list.addNodeindex(0, 10);
+  // list.addNodeindex(0, 10);
   // list.deleteNode2(2);
   // list.middleNode();
   list.displayNode();
