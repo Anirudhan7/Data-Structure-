@@ -77,7 +77,7 @@ class DoublyLinkedList {
   void deleteNode(int index) {
     Node? temp = head;
     for (int i = 0; i < index; i++) {
-      // temp = temp?.next;
+      temp = temp?.next;
     }
   }
 }

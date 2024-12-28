@@ -7,7 +7,8 @@ void main() {
   // list.insertBack(100);
   // list.insertfront(411);
   // list.deleteNode(2);
-  list.addNode(0, 40);
+  list.linearSearch(341);
+  // list.addNode(0, 40);
   list.display();
 }
 
@@ -104,8 +105,8 @@ class LinkedList {
         print(i);
       }
       temp = temp.next;
-
       i++;
     }
+    print("position not foud");
   }
 }

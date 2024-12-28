@@ -54,11 +54,11 @@ class LinkedList {
     Node? temp = head;
     while (temp != null) {
       if (temp.data == data) {
-        if(temp==data){
-          head =temp.next;
+        if (temp == data) {
+          head = temp.next;
         }
-        if(tail==null){
-          tail=tail?.prev;
+        if (tail == null) {
+          tail = tail?.prev;
         }
         temp.next?.prev = temp.prev;
         temp.prev?.next = temp.next;
@@ -66,8 +66,6 @@ class LinkedList {
       temp = temp.next;
     }
   }
-
-
 
   void insertFront(int data) {
     Node newNode = Node(data);
@@ -103,16 +101,30 @@ class LinkedList {
       temp = temp.next;
     }
   }
+
+  void sort() {
+    Node? temp = head;
+    Node? end =null;
+    while (temp != null) {
+      if (temp.data! > temp.next!.data!) {
+        temp.data != temp.next!.data;
+      }
+      temp = temp.next;
+          end=temp;
+    }
+
+  }
 }
 
 void main() {
   LinkedList list = LinkedList();
   list.createNode(11);
-  list.createNode(13);
+  list.createNode(10);
   list.createNode(14);
   list.createNode(15);
   list.createNode(16);
-  list.linearSearch(11);
+  // list.sort();
+  // list.linearSearch(11);
   // list.insertFront(10);
   //   list.insertBack(17);
 

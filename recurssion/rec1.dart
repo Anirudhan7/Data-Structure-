@@ -5,8 +5,10 @@ print(reccursive(1));
 
 int reccursive(int i) {
   if (i == 5) {
-    return 32;
+    return 0;
+    
   }
-  i++;
-  return reccursive(i);
+  print(i);
+  
+  return reccursive(i+1);
 }

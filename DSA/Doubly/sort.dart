@@ -1,14 +1,16 @@
 void main() {
 SinglyLinked list =SinglyLinked();
-//   list.crateNode(10);
-//   list.crateNode(11);
-//   list.crateNode(12);
-//   list.crateNode(13);
-//   list.crateNode(14);
-  
-  List<int> array=[10,11,12,13,14,15];
-  list.arraytoLinked(array);
-    list.displayNode();
+  list.createNode(10);
+  list.createNode(11);
+  list.createNode(12);
+  list.createNode(13);
+  list.createNode(14);
+  list.deleteNode(11);
+  list.displayNode();
+//   List<int> array=[10,11,12,13,14,15];
+//   list.arraytoLinked(array);
+//   list.deleteNode(1);
+//     list.displayNode();
 //   list.crateNode(11);
 //   list.crateNode(12);
 
@@ -133,11 +135,23 @@ temp?.next=newNode;
     }
   }
   
-  void arraytoLinked(List<int> array){
-    for(int i =0;i<array.length;i++){
-      createNode(array[i]);
-    }
-  }
-  
-  } 
+//   void arraytoLinked(List<int> array){
+//     for(int i =0;i<array.length;i++){
+//       createNode(array[i]);
+//     }
+//   }
+void deleteNode(int data){
+  Node? temp =head;
+ while(temp!=null){
+   if(temp.data==data){
+      temp.next?.prev=temp.prev;
+     temp.prev?.next=temp.next;
+     return;
+   }
+   temp=temp.next;
+ }
+
+  print("no node found");
+}
+}
   

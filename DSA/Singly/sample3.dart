@@ -1,16 +1,18 @@
 void main() {
   SinglyLinkedList list = SinglyLinkedList();
 
-  list.createNode(15);
-  list.createNode(17);
-  list.createNode(18);
-  list.createNode(23);
-   list.display();
+  list.createNode(1);
+  list.createNode(2);
+  list.createNode(3);
+  list.createNode(4);
+  list.createNode(5);
+ list.deletePos(1);
+  list.inserNode(4, 10);
+  list.display();
 
   print("------------------------");
-  list.prepend(77);
-  list.display();
- 
+  // list.prepend(77);
+  // list.display();
 }
 
 class Node {
@@ -43,15 +45,47 @@ class SinglyLinkedList {
       }
     }
   }
-    void prepend(int data){
-    Node newNode=Node(data);
-    if(head!=null){
-      head=newNode;
-    }else{
-      newNode.next=head;
-      head=newNode;
-    }
 
+  void sort() {
+    Node? temp = head;
+    while (temp != null) {
+      if (temp.data! > temp.next!.data!) {
+        temp.data != temp.next!.data;
+      }
+      temp = temp.next;
+    }
   }
 
+  void prepend(int data) {
+    Node newNode = Node(data);
+    if (head != null) {
+      head = newNode;
+    } else {
+      newNode.next = head;
+      head = newNode;
+    }
+  }
+
+  void inserNode(int index, int data) {
+    Node? curr = head;
+    Node newNode = Node(data);
+    for (int i = 0; i < index - 1; i++) {
+      curr = curr?.next;
+    }
+    if (index == 0) {
+      newNode.next = head;
+      head = newNode;
+    }
+
+    newNode.next = curr?.next;
+    curr?.next = newNode;
+  }
+  void deletePos(int index){
+    Node? temp= head;
+    for(int i =0;i<index-1;i++){
+   temp=temp?.next;
+    }
+    temp?.next= temp.next?.next;
+
+  }
 }
