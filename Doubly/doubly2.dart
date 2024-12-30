@@ -1,5 +1,5 @@
 class Node {
-  int? data;
+  var data;
   Node? next;
   Node? previous;
   Node(this.data);
@@ -84,12 +84,16 @@ class DoublyLinkedList {
 
 void main() {
   DoublyLinkedList list = DoublyLinkedList();
-  list.addNode(10);
-  list.addNode(20);
-  list.addNode(30);
-  list.addNode(40);
-  list.addNode(50);
-  list.deletemiddle();
-  list.insertBack(100);
+  String str ="abc";
+  for(int i=0;i<str.length;i++){
+    list.addNode(str[i] as int);
+  }
+  // list.addNode(10);
+  // list.addNode(20);
+  // list.addNode(30);
+  // list.addNode(40);
+  // list.addNode(50);
+  // list.deletemiddle();
+  // list.insertBack(100);
   list.display();
 }
