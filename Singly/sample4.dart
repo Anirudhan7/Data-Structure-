@@ -56,10 +56,10 @@ void main(){
   list.createnode(25);
   list.createnode(30);
   list.createnode(40);
-  list.displaylinkedlist();
+//   list.displaylinkedlist();
  
- print('--------------');
+//  print('--------------');
 
-  list.insertfront(100);
+//   list.insertfront(100);
   list.displaylinkedlist();
 }
