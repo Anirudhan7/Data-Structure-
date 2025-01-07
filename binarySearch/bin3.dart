@@ -16,7 +16,7 @@ int binarySearch(List<int> array, int target) {
 }
 
 void main() {
-  List<int> array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+  List<int> array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   int target = 3;
 int result =binarySearch(array, target);
 print(result);
