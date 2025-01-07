@@ -1,5 +1,4 @@
 
-// add a node or value t the front of the linked list
 
 class Node {
   int? data;

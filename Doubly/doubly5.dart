@@ -57,7 +57,7 @@ class LinkedList {
         if (temp == data) {
           head = temp.next;
         }
-        if (tail == null) {
+        if (tail == temp) {
           tail = tail?.prev;
         }
         temp.next?.prev = temp.prev;

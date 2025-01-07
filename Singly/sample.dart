@@ -19,10 +19,11 @@ class LinkedList {
   }
 
   void displayList() {
+     Node? temp = head;
     if (head == null) {
       print("List is empty");
     } else {
-      Node? temp = head;
+     
       while (temp != null) {
         print(temp.data);
         temp = temp.next;
