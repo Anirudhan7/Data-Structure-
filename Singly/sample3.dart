@@ -67,18 +67,18 @@ class SinglyLinkedList {
   }
 
   void inserNode(int index, int data) {
-    Node? curr = head;
+    Node? temp = head;
     Node newNode = Node(data);
     for (int i = 0; i < index - 1; i++) {
-      curr = curr?.next;
+      temp = temp?.next;
     }
     if (index == 0) {
       newNode.next = head;
       head = newNode;
     }
 
-    newNode.next = curr?.next;
-    curr?.next = newNode;
+    newNode.next = temp?.next;
+    temp?.next = newNode;
   }
   void deletePos(int index){
     Node? temp= head;

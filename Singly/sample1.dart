@@ -7,7 +7,7 @@ class Node {
 class SinglyLinkedList {
   Node? head;
   Node? tail;
-  void addNOde(int data) {
+  void createNode(int data) {
     Node newNode = Node(data);
     if (head == null) {
       head = newNode;
@@ -41,10 +41,10 @@ class SinglyLinkedList {
 void main() {
   SinglyLinkedList list = SinglyLinkedList();
   list.display();
-  list.addNOde(10);
-  list.addNOde(20);
-  list.addNOde(30);
-  list.addNOde(50);
+  list.createNode(10);
+  list.createNode(20);
+  list.createNode(30);
+  list.createNode(50);
   list.prepend(51);
   list.display();
 }

@@ -17,14 +17,8 @@ class Solution {
 void main() {
   Solution solution = Solution();
   List<int> array1 = [10, 20, 30, 5, 10, 50];
-  List<int> array2 = [10, 20, 30, 40, 50];
-  List<int> array3 = [12, 17, 15, 13, 10, 11, 12];
 
   int result1 = solution.maxAscendingSum(array1);
-  int result2 = solution.maxAscendingSum(array2);
-  int result3 = solution.maxAscendingSum(array3);
 
   print(result1);
-  print(result2);
-  print(result3);
 }

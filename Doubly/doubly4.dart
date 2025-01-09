@@ -7,8 +7,8 @@ void main() {
   // list.insertBack(100);
   // list.insertfront(411);
   // list.deleteNode(2);
-  list.linearSearch(341);
-  // list.addNode(0, 40);
+  // list.linearSearch(341);
+  list.addNode(2, 40);
   list.display();
 }
 

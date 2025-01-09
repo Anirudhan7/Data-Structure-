@@ -113,7 +113,7 @@ class LinkedList {
     newNode.next = temp?.next;
     temp?.next?.prev = newNode;
     newNode.prev = temp;
-    temp?.next = newNode;
+    temp?.next = newNode; 
   }
 
   void reverse() {
@@ -146,7 +146,7 @@ void main() {
 
   // list.insertFront(10);
   // list.insertBack(11);
-  // list.addNodeindex(0, 10);
+  list.addNodeindex(10,2);
   // list.deleteNode2(2);
   // list.middleNode();
   list.displayNode();
