@@ -4,7 +4,8 @@ void main() {
   stack.push(1);
   stack.push(2);
   stack.push(3);
-  stack.pop();
+print(stack.sum());
+  // stack.pop();
   stack.display();
 }
 
@@ -14,6 +15,13 @@ class Stack {
   void push(int data) {
     _stack.add(data);
     print("data is passed");
+  }
+  int sum(){
+    int sum =0;
+   for(int i =0;i<_stack.length;i++){
+   sum=sum+_stack[i];
+  }
+  return sum;
   }
 
   int? pop() {
