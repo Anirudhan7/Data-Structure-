@@ -61,9 +61,12 @@ void main() {
   stack.push(2);
   stack.push(3);
   stack.push(4);
+  stack.pop();
   stack.displayStack();
 
-  int? st = stack.pop();
-  print("Removed data $st");
-  stack.displayStack();
+  // int? st = stack.pop();
+  // print("Removed data $st");
+
+
+
 }

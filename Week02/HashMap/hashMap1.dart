@@ -1,8 +1,14 @@
 import 'dart:collection';
 void main(){
-  HashMap map =HashMap();
-   Map<String ,int> datas ={"a":1,"b":2,"c":3};
-    
-  map.addAll(datas);
-  print(map.runtimeType);
+Map<String,dynamic> map =Map();
+
+
+map["Name"] ="Anirudhan";
+map['age']=24;
+map['place']="Palakkad";
+map.containsKey("apple");
+map.update("Name", (value)=>"Dheerav");
+for(var i in map.values){
+  print(i);
+}
 }
