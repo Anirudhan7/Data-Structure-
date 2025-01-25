@@ -19,16 +19,16 @@ class Stack {
     return popedData;
   }
 
-  void delete(int data){
-   if(top?.data==data){
-    top=top?.next;
-    return;
-   }
-   Node? temp =top;
-   while(temp?.next?.data==data){
-    temp?.next=temp.next?.next;
-   }
-   temp=temp?.next;
+  void delete(int data) {
+    if (top?.data == data) {
+      top = top?.next;
+      return;
+    }
+    Node? temp = top;
+    while (temp?.next?.data == data) {
+      temp?.next = temp.next?.next;
+    }
+    temp = temp?.next;
   }
 
   void displayStack() {
@@ -42,17 +42,16 @@ class Stack {
       }
     }
   }
-   int ?sum(){
-    Node? temp =top;
-    int sum =0;
-    while(temp!=null){
-    sum+=temp.data??0;
-     temp =temp.next;
+
+  int? sum() {
+    Node? temp = top;
+    int sum = 0;
+    while (temp != null) {
+      sum += temp.data ?? 0;
+      temp = temp.next;
     }
-    return  sum;
-
+    return sum;
   }
-
 }
 
 void main() {
@@ -66,7 +65,4 @@ void main() {
 
   // int? st = stack.pop();
   // print("Removed data $st");
-
-
-
 }

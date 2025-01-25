@@ -1,7 +1,7 @@
-class HashTable {
+class Hashtable {
   int size;
   late List<List<MapEntry>> bucket;
-  HashTable(this.size) {
+  Hashtable(this.size) {
     bucket = List.generate(size, (_) => []);
   }
   int hash(String key) {
@@ -14,19 +14,13 @@ class HashTable {
     var entry = MapEntry(key, value);
     bucket[index].add(entry);
   }
-  get(String key){
-    int index =hash(key);
-    for(var entry in bucket[index]){
-      if(entry.key==key){
-        return entry.value;
+
+  dynamic get(String key) {
+    int index = hash(key);
+    for (var i in bucket[index]) {
+      if (i.key == key) {
+        return i.value;
       }
     }
   }
-  
-}
-void main(){
-  HashTable hashTable = HashTable(4);
-  hashTable.set("name", "anirudhan");
-  hashTable.set("plcae","palakkad");
-  print(hashTable.get("name"));
 }
