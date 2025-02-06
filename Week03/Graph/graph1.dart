@@ -81,5 +81,6 @@ void main() {
   graph.insert(17, 21);
   // graph.bfs(10);
   // graph.dfs(10);
-  graph.display();
+  graph.bfs(10);
+  // graph.display();
 }
