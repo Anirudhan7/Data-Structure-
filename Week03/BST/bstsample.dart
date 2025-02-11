@@ -1,12 +1,6 @@
 void main() {
-
-  BinarySearchTree tree =BinarySearchTree();
-  tree.insert(10);
-  tree.insert(20);
-  tree.insert(30);
-  tree.insert(5);
-  print(tree.contains(5));
-
+  BinarySearchTree tree = BinarySearchTree();
+  
 }
 
 class Node {
@@ -20,7 +14,7 @@ class BinarySearchTree {
   Node? root;
 
   void insert(int data) {
-    Node? newNode = Node(data);
+    Node newNode = Node(data);
     if (root == null) {
       root = newNode;
       return;

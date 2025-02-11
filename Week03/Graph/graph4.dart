@@ -33,14 +33,19 @@ class Graph{
 
   void dfs(int vertex){
     if(graph.containsKey(vertex)){
-      Set visited ={};
+      Set<int> visited ={};
+      _dfshelper(vertex, visited);
 
     }
   }
   
   void _dfshelper(int vertex ,Set<int> visited){
     visited.add(vertex);
-    
+    for(int i in graph[vertex]!){
+      if(!visited.contains(i)){
+        _dfshelper(i, visited);
+      }
+    }
   }
 }
 
@@ -49,5 +54,6 @@ void main (){
   graph.insert(12, 20);
   graph.insert(20, 30);
   graph.insert(12, 30);
+  graph.dfs(32);
   graph.bfs(12);
 }
