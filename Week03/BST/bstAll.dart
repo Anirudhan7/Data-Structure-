@@ -49,37 +49,41 @@ class BsT {
     }
     print('do not exist');
   }
-  void inorder(){
+
+  void inorder() {
     inorderHelp(root);
   }
-  void inorderHelp(Node? node){
-    if(node!=null){
+
+  void inorderHelp(Node? node) {
+    if (node != null) {
       inorderHelp(node.left);
       print(node.data);
       inorderHelp(node.right);
-      
     }
   }
-  void preOrder(){
+
+  void preOrder() {
     preOrderhelp(root);
   }
-  void preOrderhelp(Node? node){
-   if(node!=null){
+
+  void preOrderhelp(Node? node) {
+    if (node != null) {
       print(node.data);
-     preOrderhelp(node.left);
-     preOrderhelp(node.right);
-    
-   }
+      preOrderhelp(node.left);
+      preOrderhelp(node.right);
+    }
   }
-  void postOrder(){
+
+  void postOrder() {
     postOrderHelper(root);
   }
-  void postOrderHelper(Node? node){
-  if(node!=null){
-    postOrderHelper(node.left);
-    postOrderHelper(node.right);
-    print(node.data);
-  }
+
+  void postOrderHelper(Node? node) {
+    if (node != null) {
+      postOrderHelper(node.left);
+      postOrderHelper(node.right);
+      print(node.data);
+    }
   }
 }
 
@@ -90,12 +94,12 @@ void main() {
   bst.insertNode(11);
   bst.insertNode(4);
   bst.insertNode(9);
-  
+
   print('inorder');
   bst.inorder();
-  
+
   print('preOeder');
   bst.preOrder();
   print('postOrder');
- bst.postOrder();
+  bst.postOrder();
 }
