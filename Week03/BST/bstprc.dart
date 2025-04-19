@@ -35,4 +35,34 @@ class BinarySarchTree {
       }
     }
   }
+  void inorder(){
+   inorderHelper(root);
+  }
+
+  void  inorderHelper(Node? node){
+    if(node!=null){
+      inorderHelper(node.left);
+      print(node.data);
+      inorderHelper(node.right);
+    }
+  }
+  void preorder(){
+    preorderHelper(root);
+
+  }
+  void preorderHelper(Node? node){
+  if(node!=null){
+    print(node.data);
+    preorderHelper(node.left);
+    preorderHelper(node.right);
+  }
+  }
+  
+  void postOrderHelper(Node? node){
+     if(node!=null){
+      print(node.left);
+      print(node.right);
+      print(node.data);
+     }
+  }
 }
